@@ -25,7 +25,7 @@ public static void main(String[] args) {
 	
 	Text text1 = new Text(group, SWT.SEARCH | SWT.LEAD | SWT.BORDER);
 	text1.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false));
-	text1.setText("Search field1");
+	text1.setText("Search field");
 	
 	Text text2 = new Text(group, SWT.MULTI | SWT.LEAD | SWT.BORDER);
 	text2.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false));
