@@ -42,7 +42,7 @@ public class ButtonExample {
 		
 		Button button4 = new Button(group, SWT.TOGGLE);
 		button4.setLayoutData(new GridData(SWT.BEGINNING, SWT.CENTER, false, false));
-		button4.setText("Toggle button");
+		button4.setText("Toggle button1");
 		
 		shell.pack();
 		shell.open();
