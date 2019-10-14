@@ -27,6 +27,10 @@ public static void main(String[] args) {
 	text1.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false));
 	text1.setText("Search field");
 	
+	Text text11 = new Text(group, SWT.PASSWORD | SWT.LEAD | SWT.BORDER);
+	text11.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false));
+	text11.setText("password field");
+	
 	Text text2 = new Text(group, SWT.MULTI | SWT.LEAD | SWT.BORDER);
 	text2.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false));
 	text2.setText("multi text field");
