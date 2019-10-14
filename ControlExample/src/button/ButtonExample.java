@@ -24,6 +24,10 @@ public class ButtonExample {
 		button.setLayoutData(new GridData(SWT.BEGINNING, SWT.CENTER, false, false));
 		button.setText("Push Button");
 		
+		Button button0 = new Button(group, SWT.PUSH);
+		button0.setLayoutData(new GridData(SWT.BEGINNING, SWT.CENTER, false, false));
+		button0.setText("Push Button1");
+		
 		Button button2 = new Button(group, SWT.CHECK);
 		button2.setLayoutData(new GridData(SWT.BEGINNING, SWT.CENTER, false, false));
 		button2.setText("Check Button");
@@ -35,6 +39,10 @@ public class ButtonExample {
 		Button button33 = new Button(group, SWT.RADIO);
 		button33.setLayoutData(new GridData(SWT.BEGINNING, SWT.CENTER, false, false));
 		button33.setText("Radio button2");
+		
+		Button button333 = new Button(group, SWT.RADIO);
+		button333.setLayoutData(new GridData(SWT.BEGINNING, SWT.CENTER, false, false));
+		button333.setText("Radio button3");
 		
 		Button button4 = new Button(group, SWT.TOGGLE);
 		button4.setLayoutData(new GridData(SWT.BEGINNING, SWT.CENTER, false, false));
