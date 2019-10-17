@@ -35,6 +35,10 @@ public static void main(String[] args) {
 	text2.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false));
 	text2.setText("multi text field1");
 	
+	text2 = new Text(group, SWT.MULTI | SWT.LEAD | SWT.BORDER);
+	text2.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false));
+	text2.setText("multi text field2");
+	
 	
 	shell.pack();
 	shell.open();
