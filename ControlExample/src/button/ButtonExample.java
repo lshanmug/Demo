@@ -68,6 +68,10 @@ public class ButtonExample {
 		button4.setLayoutData(new GridData(SWT.BEGINNING, SWT.CENTER, false, false));
 		button4.setText("Toggle button444");
 		
+		button4 = new Button(group, SWT.TOGGLE);
+		button4.setLayoutData(new GridData(SWT.BEGINNING, SWT.CENTER, false, false));
+		button4.setText("Toggle button45");
+		
 		shell.pack();
 		shell.open();
 		while (!shell.isDisposed()) {
