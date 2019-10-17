@@ -25,7 +25,7 @@ public static void main(String[] args) {
 	
 	label = new Label(group, SWT.NONE);
 	label.setLayoutData(new GridData(SWT.BEGINNING, SWT.CENTER, false, false));
-	label.setText("text label2");
+	label.setText("text label0");
 
 	shell.pack();
 	shell.open();
