@@ -1,7 +1,7 @@
 package greet;
 
 public class Hello {
-private void sayHello() {
+public static void sayHello() {
 	System.out.println("Bonjour!");
 }
 }
