@@ -4,76 +4,29 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Button;
+import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.Shell;
 
 public class ButtonExample1 {
+	
+	static void createButtons(Composite parent) {
+		createButton(parent, SWT.PUSH, "Push button");
+	}
+	
 	public static void main(String[] args) {
 		Display display = new Display();
 		Shell shell = new Shell(display);
 		shell.setLayout(new GridLayout(1, false));
 		shell.setText("Buttons");
 		
-		Group group = new Group(shell, SWT.NONE);
-		group.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false));
-		group.setLayout(new GridLayout(1, false));
-		group.setText("Button group");
-		
-		Button button = new Button(group, SWT.PUSH);
-		button.setLayoutData(new GridData(SWT.BEGINNING, SWT.CENTER, false, false));
-		button.setText("Push Button");
-		
-		Button button0 = new Button(group, SWT.PUSH);
-		button0.setLayoutData(new GridData(SWT.BEGINNING, SWT.CENTER, false, false));
-		button0.setText("Push Button1");
-		
-		Button button2 = new Button(group, SWT.CHECK);
-		button2.setLayoutData(new GridData(SWT.BEGINNING, SWT.CENTER, false, false));
-		button2.setText("Check Button");
-		
-		Button button3 = new Button(group, SWT.RADIO);
-		button3.setLayoutData(new GridData(SWT.BEGINNING, SWT.CENTER, false, false));
-		button3.setText("Radio button1");
-		
-		Button button33 = new Button(group, SWT.RADIO);
-		button33.setLayoutData(new GridData(SWT.BEGINNING, SWT.CENTER, false, false));
-		button33.setText("Radio button2");
-		
-		Button button333 = new Button(group, SWT.RADIO);
-		button333.setLayoutData(new GridData(SWT.BEGINNING, SWT.CENTER, false, false));
-		button333.setText("Radio button3");
-		
-		button333 = new Button(group, SWT.RADIO);
-		button333.setLayoutData(new GridData(SWT.BEGINNING, SWT.CENTER, false, false));
-		button333.setText("Radio button4");
-		
-		button333 = new Button(group, SWT.RADIO);
-		button333.setLayoutData(new GridData(SWT.BEGINNING, SWT.CENTER, false, false));
-		button333.setText("Radio button5");
-		
-		button333 = new Button(group, SWT.RADIO);
-		button333.setLayoutData(new GridData(SWT.BEGINNING, SWT.CENTER, false, false));
-		button333.setText("Radio button6");
-		
-		Button button4 = new Button(group, SWT.TOGGLE);
-		button4.setLayoutData(new GridData(SWT.BEGINNING, SWT.CENTER, false, false));
-		button4.setText("Toggle button2");
-		
-		button4 = new Button(group, SWT.TOGGLE);
-		button4.setLayoutData(new GridData(SWT.BEGINNING, SWT.CENTER, false, false));
-		button4.setText("Toggle button3");
-		
-		button4 = new Button(group, SWT.TOGGLE);
-		button4.setLayoutData(new GridData(SWT.BEGINNING, SWT.CENTER, false, false));
-		button4.setText("Toggle button444");
-		
-		button4 = new Button(group, SWT.TOGGLE);
-		button4.setLayoutData(new GridData(SWT.BEGINNING, SWT.CENTER, false, false));
-		button4.setText("Toggle button45");
+		Group group = createGroup(shell);
+		createButtons(group);
 		
 		shell.pack();
 		shell.open();
+		
 		while (!shell.isDisposed()) {
 			if (!display.readAndDispatch())
 				display.sleep();
@@ -81,4 +34,19 @@ public class ButtonExample1 {
 		display.dispose();
 	}
 
+	private static Group createGroup(Shell shell) {
+		Group group = new Group(shell, SWT.NONE);
+		group.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false));
+		group.setLayout(new GridLayout(1, false));
+		group.setText("Button group");
+		return group;
+	}
+
+	private static Button createButton(Composite parent, int style, String text) {
+		Button button = new Button(parent, style);
+		button.setLayoutData(new GridData(SWT.BEGINNING, SWT.CENTER, false, false));
+		button.setText(text);
+		return button;
+	}
+	
 }
