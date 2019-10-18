@@ -6,6 +6,6 @@ public static void main(String[] args) {
 }
 
 private static void sayHello() {
-	System.out.println("Hello World");
+	System.out.println("Hello ECE");
 }
 }
