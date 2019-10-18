@@ -39,7 +39,6 @@ public static void main(String[] args) {
 	text2.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false));
 	text2.setText("multi text field2");
 	
-	
 	shell.pack();
 	shell.open();
 	while (!shell.isDisposed()) {
