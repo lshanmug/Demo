@@ -16,7 +16,7 @@ public static void main(String[] args) {
 	Group group = new Group(shell, SWT.NONE);
 	group.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false));
 	group.setLayout(new GridLayout(1, false));
-	group.setText("SWT Button group");
+	group.setText("Button group");
 	
 	ButtonExample1.createButtons(group);
 	
